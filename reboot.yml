@@ -3,5 +3,5 @@
   tasks:
     - name: Restart Servers
       shell: reboot 
-      wait time: 10
+      connect_timeout: 60
 
