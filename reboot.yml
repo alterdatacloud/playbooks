@@ -3,4 +3,4 @@
   tasks:
     - name: Restart Servers
       shell: reboot
-      tags: restart
+      async: 60
