@@ -1,0 +1,4 @@
+---
+hosts: all
+- name: Task1 Upgrading 10.04 to 12.04
+shell: reboot
