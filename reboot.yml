@@ -2,5 +2,6 @@
 - hosts: all
   tasks:
     - name: Restart Servers
-      shell: reboot time=10
+      shell: reboot 
+      wait time: 10
 
