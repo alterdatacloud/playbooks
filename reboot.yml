@@ -6,6 +6,7 @@
       async: 0
       poll: 0
     - name: Aguardando S.O  
+    - local_action:
        state=started 
        port=22 
        delay=30 
