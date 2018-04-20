@@ -3,3 +3,4 @@
   tasks:
     - name: Restart Servers
       shell: reboot
+      tags: restart
