@@ -3,4 +3,4 @@
   tasks:
     - name: Restart Servers
       shell: reboot
-      async: 60
+      wait: 60s
