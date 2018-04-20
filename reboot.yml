@@ -3,5 +3,11 @@
   tasks:
     - name: Restart Servers
       shell: reboot 
-      connect_timeout: 60
-
+      async: 0
+      poll: 0
+    - name: Aguardando S.O  
+       state=started 
+       port=22 
+       delay=30 
+       timeout=300 
+       connect_timeout=15
