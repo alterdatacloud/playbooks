@@ -1,0 +1,33 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: create the VM
+    vmware_guest:
+      hostname: win-inf-vc01.alterdata.matriz
+      username: alterdata\admin
+      password: L3xus@H0ver#
+      validate_certs: no
+      esxi_hostname: vm02.alterdata.matriz
+      datacenter: Alterdata
+      folder: /INFRA/Linux
+      name: ANSIBLE-TESTVM
+      state: poweredoff
+      hardware:
+        memory_mb: 512
+        num_cpus: 1
+        scsi: paravirtual
+      disk:
+      - size_gb: 10
+          type: thin
+          datastore: VMDATA29
+      networks:
+      - name: "DMZ"
+        ip: 172.16.101.201
+        netmask: 255.255.255.0
+        gateway: 172.16.101.254
+      template: TEMPLATE_UBUNTU_14.04.3
+      wait_for_ip_address: yes
+    register: deploy
+  - debug: var=deploy
