@@ -19,7 +19,7 @@
         num_cpus: 1
         scsi: paravirtual
       disk:
-      - size_gb: 10
+      - size_gb: 12
         type: thin
         datastore: VMDATA29
       networks:
