@@ -20,8 +20,8 @@
         scsi: paravirtual
       disk:
       - size_gb: 10
-          type: thin
-          datastore: VMDATA29
+        type: thin
+        datastore: VMDATA29
       networks:
       - name: "DMZ"
         ip: 172.16.101.201
