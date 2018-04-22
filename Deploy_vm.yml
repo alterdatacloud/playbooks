@@ -7,7 +7,7 @@
     vmware_guest:
       hostname: win-inf-vc01.alterdata.matriz
       username: alterdata\admin
-      password: L3xus@H0ver#
+      password: *********
       validate_certs: no
       esxi_hostname: vm02.alterdata.matriz
       datacenter: Alterdata
