@@ -2,17 +2,12 @@
 - hosts: 127.0.0.1
   connection: local
   gather_facts: no
-  
-  vars_prompt:
-    - name: "vsphere_password"
-      prompt: "vSphere Password"
-      private: yes
   tasks:
   - name: create the VM
     vmware_guest:
       hostname: win-inf-vc01.alterdata.matriz
       username: alterdata\admin
-      password: "{{ vsphere_password }}"
+      password: **********
       validate_certs: no
       esxi_hostname: vm02.alterdata.matriz
       datacenter: Alterdata
