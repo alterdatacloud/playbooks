@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+  - win_domain_membership:
+      dns_domain_name: cloud.internal
+      domain_admin_user: admin@alterdata.cloud
+      domain_admin_password: L3xus@H0ver#
+      domain_ou_path:
+      state: domain
+    register: domain_state
+
+  - win_reboot:
+        state: reboot
