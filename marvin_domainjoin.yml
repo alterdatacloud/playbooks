@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: windows
   gather_facts: no
   tasks:
   - win_domain_membership:
